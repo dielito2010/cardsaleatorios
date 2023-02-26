@@ -1,5 +1,6 @@
 const { objetoValido } = require("../db/dbConfig");
 const service = require("./card.service");
+const serviceCategoria = require("../categoria/categoria.service");
 
 const todosCards = async (req, res) => {
   const cards = await service.todosCards();
@@ -23,7 +24,16 @@ const cardPorId = async (req, res) => {
 const criar = async (req, res) => {
   const card = req.body;
   if (!card || !card.nome || !card.imageUrl || !card.categoria) {
-    return res.status(400).send({ message: "Dados inválidos!" });
+    return res.status(400).send({
+      message: "Dados inválidos ou dados obrigatórios não informados!",
+    });
+  }
+
+  const categoria = req.body;
+  const categoriaId = categoria.categoria;
+  const buscarId = await serviceCategoria.categoriaId(categoriaId);
+  if (!buscarId) {
+    return res.status(404).send({ message: "categoria não encontrada!" });
   }
 
   const novoCard = await service.criar(card);

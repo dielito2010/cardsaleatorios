@@ -28,7 +28,7 @@ async function main() {
   });
 
   app.use("/cards", cardRouter);
-  app.use("/categoria", categoriaRouter);
+  app.use("/categorias", categoriaRouter);
 
   app.listen(port, () => {
     console.log(`Servidor rodando na porta: ${port} \n Para cancelar: ctrl+c`);
