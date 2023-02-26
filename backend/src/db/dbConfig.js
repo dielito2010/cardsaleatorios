@@ -1,4 +1,4 @@
-const mongoose = require("mongose");
+const mongoose = require("mongoose");
 
 const databaseUrl =
   "mongodb+srv://admin:YzOCE9cR7TOWpyCV@cluster0.nxhs41w.mongodb.net/";
