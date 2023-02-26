@@ -1,8 +1,8 @@
-const Categoria = require("./categoria.model");
+const Categorias = require("./categoria.model");
 const ObjectId = require("mongoose").Types.ObjectId;
 
 const todasCategorias = () => {
-  return Categoria.find();
+  return Categorias.find();
 };
 
 module.exports = {

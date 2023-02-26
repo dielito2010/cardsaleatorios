@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const databaseUrl =
-  "mongodb+srv://admin:YzOCE9cR7TOWpyCV@cluster0.nxhs41w.mongodb.net/";
+  "mongodb+srv://admin:YzOCE9cR7TOWpyCV@cluster0.nxhs41w.mongodb.net/cardsaleatorios";
 
-const conexaoDb = () => {
+const conectandoDB = () => {
   return mongoose
     .connect(databaseUrl)
     .then(() => console.log("Mongo conectado com sucesso!"))
@@ -15,6 +15,6 @@ const objetoValido = (id) => {
 };
 
 module.exports = {
-  conexaoDb,
+  conectandoDB,
   objetoValido,
 };
