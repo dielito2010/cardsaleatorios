@@ -12,8 +12,8 @@ const { conectandoDB } = require("./db/dbConfig");
 const cardRouter = require("./card/card.router");
 const categoriaRouter = require("./categoria/categoria.router");
 
-// verificar se port é maiúsculo
-const port = process.env.port || 3000;
+//Decarando a porta do servidor
+const port = process.env.PORT || 3000;
 
 //Função principal assíncrona
 async function main() {
