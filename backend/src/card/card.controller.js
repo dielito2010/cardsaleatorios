@@ -1,7 +1,12 @@
+//Import de objeto validado pelo arquivo dbconfig
 const { objetoValido } = require("../db/dbConfig");
+
+//Import dos serviços
 const service = require("./card.service");
 const serviceCategoria = require("../categoria/categoria.service");
 
+/*Funções assíncronas que implementam as regras de negócio da API
+usam os imports para fazerem as validações e relizar as tarefas(CRUD)*/
 const todosCards = async (req, res) => {
   const cards = await service.todosCards();
   res.send(cards);
@@ -72,6 +77,7 @@ const excluirCard = async (req, res) => {
   res.send({ message: "Card excluido com sucesso!" });
 };
 
+//exporta os resultados para API
 module.exports = {
   todosCards,
   cardPorId,

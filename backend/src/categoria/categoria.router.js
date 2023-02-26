@@ -1,7 +1,11 @@
+//import do express e express.router
 const express = require("express");
-const controller = require("./categoria.controller");
 const router = express.Router();
 
+//Rota busca o que fazer no controller
+const controller = require("./categoria.controller");
+
+//Index direciona para essas rotas depois do /categorias...
 router.get("/", controller.todasCategorias);
 router.get("/:id", controller.categoriaId)
 router.post("/", controller.criar);

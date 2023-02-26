@@ -1,8 +1,12 @@
+//importando as propriedades do model
 const Card = require("./card.model");
+
+//Usando mongoose para validar um objetoId
 const ObjectId = require("mongoose").Types.ObjectId;
 
+//Funções flechas para os serviços acessarem o DB e retornar algo:
 const todosCards = () => {
-  return Card.find().select("nome imageUrl");
+  return Card.find().select("nome imageUrl categoria");
 };
 
 const cardPorId = (id) => {
@@ -24,6 +28,7 @@ const excluirCard = (id) => {
   return Card.findByIdAndDelete(objectID);
 };
 
+//Exportando os retornos para API
 module.exports = {
   todosCards,
   cardPorId,
