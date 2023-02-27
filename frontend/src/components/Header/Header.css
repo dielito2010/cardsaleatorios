@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.Header {
+    background: #0042BE;
+    display: flex;
+    align-items: center;
+}
+
+.Header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: white;
+    padding: 20px;
+}
+
+.Header a{
+    color: #ffffff;
+    border: solid white 1px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.Header a:hover {
+    text-decoration: none;
+    border: solid white 2px;
+}

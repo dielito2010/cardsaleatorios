@@ -2,37 +2,37 @@
 para onde será feita as requisições HTTP*/
 export const Api = {
   //Url: "http://localhost:3000/",
-  Url: "https://api-cards-aleatorios.onrender.com/",
+  Url: "https://api-cards-aleatorios.onrender.com",
 
   //Endpoints dos cards
   cards: {
     todosCards: function () {
-      return Api.Url + "cards";
+      return Api.Url + "/cards";
     },
-    atualizar: function () {
-      return this.endpoint() + "/" + id;
+    atualizar: function (id) {
+      return this.todosCards() + "/" + id;
     },
     criar: function () {
-      return this.endpoint() + "/";
+      return this.todosCards() + "/";
     },
     excluir: function (id) {
-      return this.endpoint() + "/" + id;
+      return this.todosCards() + "/" + id;
     },
   },
 
   //Endpoints das categorias
   categorias: {
     todasCategorias: function () {
-      return Api.Url + "categorias";
+      return Api.Url + "/categorias";
     },
-    atualizar: function () {
-      return this.endpoint() + "/" + id;
+    atualizar: function (id) {
+      return this.todasCategorias() + "/" + id;
     },
     criar: function () {
-      return this.endpoint() + "/";
+      return this.todasCategorias() + "/";
     },
     excluir: function (id) {
-      return this.endpoint() + "/" + id;
+      return this.todasCategorias() + "/" + id;
     },
   },
 
