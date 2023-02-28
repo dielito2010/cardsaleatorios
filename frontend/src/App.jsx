@@ -1,7 +1,10 @@
 import "./App.css";
-//usando export no inicio da função tem que colocar entre chaves
+import { Routes, Route } from "react-router-dom";
+import { TodosCards } from "./components/Cards/TodosCards";
+import { Categorias } from "./components/Categorias/Categorias";
 import { Footer } from "./components/Footer/Footer";
-//usando export no final do arquivo tem não pode colocar entre chaves
+//usando export no inicio da função tem que colocar entre chaves
+//usando export no final do arquivo não pode colocar entre chaves
 import Header from "./components/Header/Header";
 
 function App() {
@@ -10,15 +13,16 @@ function App() {
       <header>
         <Header />
       </header>
+
       <main>
-        <h1>Hello World!</h1>
-        <div className="teste">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
-          nam veritatis voluptatum blanditiis optio ex a in, repellat corporis
-          eos perferendis laborum ad expedita mollitia eum pariatur labore, fuga
-          temporibus!
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<TodosCards />} />
+            <Route path="/categorias" element={<Categorias />} />
+          </Routes>
         </div>
       </main>
+
       <footer>
         <Footer />
       </footer>

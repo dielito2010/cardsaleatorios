@@ -6,8 +6,14 @@
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 small > a {
   color: inherit;
+  text-decoration: none;
+}
+
+small a:hover{
+  text-decoration: underline;
 }

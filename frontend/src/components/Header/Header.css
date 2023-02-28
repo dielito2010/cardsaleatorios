@@ -27,6 +27,7 @@ nav {
 
 .logo a {
     color: white;
+    text-decoration: none;
 }
 
 .logo a:hover {
@@ -45,6 +46,7 @@ nav {
     margin: 10px;
     text-shadow: 2px 2px black;
     box-shadow: 2px 2px black;
+    text-decoration: none;
 }
 
 .botoes a:hover {

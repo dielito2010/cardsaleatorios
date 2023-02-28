@@ -1,0 +1,76 @@
+.typewriter h1 {
+  max-width: 200px;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.2rem solid black;
+  white-space: nowrap;
+  margin: auto;
+  letter-spacing: 0.1px;
+  animation: typing 3.5s steps(120, end) alternate infinite,
+    blink-caret 0.5s step-end infinite, rotateText 3.5s ease alternate infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.5) translateX(10px) skewY(10deg);
+  }
+  75% {
+    transform: rotate(-10deg) scale(0.8) translateX(-10px) skewY(-10deg);
+  }
+  100% {
+    transform: rotate(5deg) scale(1.2) translateX(5px) skewY(5deg);
+  }
+}
+
+.categorias {
+  margin: auto;
+  background: #f2f2f2;
+  padding: 30px;
+  width: 350px;
+  border-radius: 30px;
+}
+
+.categoria {
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.entradaCategoria {
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+  padding: 15px;
+}
+
+#entradaCategoria {
+  border: none;
+  font-size: inherit;
+}
