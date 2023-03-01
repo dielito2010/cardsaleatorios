@@ -46,8 +46,8 @@
 }
 
 .categorias {
-  margin: auto;
-  background: #f2f2f2;
+  margin: 150px auto 10px auto;
+  background: lightgray;
   padding: 30px;
   width: 350px;
   border-radius: 30px;
@@ -73,4 +73,9 @@
 #entradaCategoria {
   border: none;
   font-size: inherit;
+}
+
+.novaCateoria{
+  color: rgb(0, 200, 0);
+  float: right;
 }
