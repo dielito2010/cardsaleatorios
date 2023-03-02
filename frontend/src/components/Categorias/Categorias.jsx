@@ -1,11 +1,10 @@
 import "./Categorias.css";
 import { Api } from "../../api/api";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCirclePlus,
-  faDeleteLeft,
+  faEdit,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -26,22 +25,40 @@ export function Categorias() {
     const nome = event.target.nomeCategoria.value;
     const objeto = { nome };
     const criandoUrl = Api.categorias.criar();
-    const resposta = await Api.buildApiPostRequest(criandoUrl, objeto);
-    const resultadoStatus = await resposta.json();
+    const respostaCriando = await Api.buildApiPostRequest(criandoUrl, objeto);
+    const resultadoCriando = await respostaCriando.json();
 
-    if (resposta.status === 201) {
-      alert(resultadoStatus.message);
-      event.target.nomeCategoria.value = ""
+    if (respostaCriando.status === 201) {
+      alert(resultadoCriando.message);
+      event.target.nomeCategoria.value = "";
     } else {
-      alert(resultadoStatus.message);
+      alert(resultadoCriando.message);
     }
     relizarRequisicao();
-  };
+  }
+
+  function editarCategoria({ currentTarget }, event) {
+    console.log(currentTarget.id)
+  }
 
   //O currentTarget sempre se refere ao elemento associado ao event handler,
   //ao invés do event.target que identifica o elemento ao qual o evento ocorreu.
-  function removerCategoria({currentTarget}) {
-    console.log(currentTarget.id)
+  async function removerCategoria({ currentTarget }) {
+    if (!confirm("Deseja realmente excluir essa categoria?")) {
+      return;
+    }
+    const excluirCategoriaUrl = Api.categorias.excluir(currentTarget.id);
+    const respostaExcluindo = await Api.buildApiDeleteRequest(
+      excluirCategoriaUrl
+    );
+    const resultadoExcluindo = await respostaExcluindo.json();
+
+    if (resultadoExcluindo.status === 200) {
+      alert(resultadoExcluindo.message);
+    } else {
+      alert(resultadoExcluindo.message);
+    }
+    relizarRequisicao();
   }
 
   useEffect(function () {
@@ -58,6 +75,7 @@ export function Categorias() {
 
   return (
     <div className="categorias">
+      <div className="message"></div>
       <form onSubmit={addCateoria}>
         <div className="entradaCategoria">
           <input
@@ -70,9 +88,22 @@ export function Categorias() {
         </div>
       </form>
       {categorias.map((categoria) => (
-        <div className="categoria" key={categoria._id} >
+        <div className="categoria" key={categoria._id}>
           <span>{categoria.nome}</span>
-          <FontAwesomeIcon id={categoria._id} onClick={removerCategoria} icon={faTrash} />
+          <div className="editarRemover">
+            <FontAwesomeIcon
+              id={categoria.id}
+              icon={faEdit}
+              className="iconeEditarCategoria"
+              onClick={editarCategoria}
+            />
+            <FontAwesomeIcon
+              id={categoria._id}
+              className="iconeExcluirCategoria"
+              onClick={removerCategoria}
+              icon={faTrash}
+            />
+          </div>
         </div>
       ))}
     </div>

@@ -69,3 +69,20 @@
   margin: 8px 0;
   padding: 15px;
 }
+
+.editarRemover{
+  float: right;
+}
+
+.iconeEditarCategoria{
+  font-size: 1.5rem;
+  color: rgb(96, 96, 253);
+  cursor: pointer;
+}
+
+.iconeExcluirCategoria{
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: rgb(255, 97, 97);
+  cursor: pointer;
+}
