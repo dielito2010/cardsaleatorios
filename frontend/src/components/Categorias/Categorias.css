@@ -69,13 +69,3 @@
   margin: 8px 0;
   padding: 15px;
 }
-
-#entradaCategoria {
-  border: none;
-  font-size: inherit;
-}
-
-.novaCateoria{
-  color: rgb(0, 200, 0);
-  float: right;
-}

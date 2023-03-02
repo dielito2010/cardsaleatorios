@@ -28,12 +28,12 @@ const categoriaId = async (req, res) => {
 const criar = async (req, res) => {
   const categoria = req.body;
   if (!categoria || !categoria.nome) {
-    return res.status(400).send({ message: "Dados inválidos!" });
+    return res.status(400).send({ message: "Dados inválidos, favor verificar!" });
   }
 
   const novaCategoria = await service.criar(categoria);
 
-  res.status(201).send(novaCategoria);
+  res.status(201).send({ message: "Categoria criada com sucesso!" });
 };
 
 const excluirCategoria = async (req, res) => {
