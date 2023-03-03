@@ -18,6 +18,10 @@ const criar = (categoria) => {
   return Categorias.create(categoria);
 }
 
+const atualizarCategoria = (id, categoria) => {
+  return Categorias.findByIdAndUpdate(id, categoria);
+}
+
 const excluirCategoria = (id) => {
   return Categorias.findByIdAndDelete(id);
 }
@@ -26,6 +30,7 @@ const excluirCategoria = (id) => {
 module.exports = {
   todasCategorias,
   criar,
+  atualizarCategoria,
   excluirCategoria,
   categoriaId,
 };

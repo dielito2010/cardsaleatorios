@@ -36,6 +36,15 @@ const criar = async (req, res) => {
   res.status(201).send({ message: "Categoria criada com sucesso!" });
 };
 
+const atualizarCategoria = async (req, res) => {
+  const id = req.params.id
+  const categoria = req.body;
+
+  const categoriaAtualizada = await service.atualizarCategoria(id, categoria);
+
+  res.status(201).send({ message: "Categoria atualizada com sucesso!" });
+}
+
 const excluirCategoria = async (req, res) => {
   const id = req.params.id;
   if (!objetoValido(id)) {
@@ -54,5 +63,6 @@ module.exports = {
   todasCategorias,
   categoriaId,
   criar,
+  atualizarCategoria,
   excluirCategoria,
 };
