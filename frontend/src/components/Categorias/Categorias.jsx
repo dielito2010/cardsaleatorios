@@ -39,6 +39,7 @@ export function Categorias() {
           <div className="editarRemover">
             <CategoriaEditar
               categoria={categoria}
+              renderizarCategorias={relizarRequisicao}
             />
             <CategoriaRemover
               id={categoria._id}

@@ -17,14 +17,12 @@ export function CategoriaEditar(props) {
     } else {
       const _id = props.categoria._id;
       const nome = atualizar;
-      const objeto = {
-        _id,
-        nome,
-      };
-      const criandoUrl = Api.categorias.atualizar(_id)
+      const objeto = { nome };
+      const criandoUrl = Api.categorias.atualizar(_id);
       const respostaEditar = await Api.buildApiPutRequest(criandoUrl, objeto);
       const resultadoEditar = await respostaEditar.json();
-      console.log(resultadoEditar);
+      alert(resultadoEditar.message);
+      props.renderizarCategorias();
     }
   }
 
