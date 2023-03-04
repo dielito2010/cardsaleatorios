@@ -6,7 +6,7 @@ const ObjectId = require("mongoose").Types.ObjectId;
 
 //Funções flechas para os serviços acessarem o DB e retornar algo:
 const todasCategorias = () => {
-  return Categorias.find();
+  return Categorias.find().sort({_id:-1});
 };
 
 const categoriaId = (id) => {
