@@ -39,6 +39,9 @@ const criar = async (req, res) => {
 const atualizarCategoria = async (req, res) => {
   const id = req.params.id
   const categoria = req.body;
+  if (!objetoValido(id)) {
+    return res.status(400).send({ message: "Id inválido!" });
+  }
 
   const categoriaAtualizada = await service.atualizarCategoria(id, categoria);
 
