@@ -1,4 +1,5 @@
 import "./CategoriaCriar.css";
+import { useNavigate } from "react-router-dom"
 import { Api } from "../../api/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
@@ -6,11 +7,13 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 export function CategoriaCriar(props) {
   async function addCateoria(event) {
     event.preventDefault();
+    event.target.bntSubmit.disable = true;
     const nome = event.target.nomeCategoria.value;
     const objeto = { nome };
     const criandoUrl = Api.categorias.criar();
     const respostaCriando = await Api.buildApiPostRequest(criandoUrl, objeto);
     const resultadoCriando = await respostaCriando.json();
+    event.target.bntSubmit.disable = false;
 
     if (respostaCriando.status === 201) {
       alert(resultadoCriando.message);

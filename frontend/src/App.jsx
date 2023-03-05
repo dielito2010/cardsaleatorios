@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { TodosCards } from "./components/Cards/TodosCards";
+import { Cards } from "./components/Cards/Cards";
+import { CardCriar } from "./components/Cards/CardCriar";
 import { Categorias } from "./components/Categorias/Categorias";
 import { Footer } from "./components/Footer/Footer";
 //usando export no inicio da função tem que colocar entre chaves
@@ -17,8 +18,9 @@ function App() {
       <main>
         <div className="content">
           <Routes>
-            <Route path="/" element={<TodosCards />} />
+            <Route path="/" element={<Cards />} />
             <Route path="/categorias" element={<Categorias />} />
+            <Route path="/novo-card" element={<CardCriar />} />
           </Routes>
         </div>
       </main>
