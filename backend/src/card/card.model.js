@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const cardSchema = new mongoose.Schema({
   nome: { type: String, require: true },
   imageUrl: { type: String, require: true },
+  siteReferencia: { type: String, require: false },
+  texto : { type: String, require: false },
   categoria: {
     type: mongoose.Schema.Types.ObjectId,
     require: true,

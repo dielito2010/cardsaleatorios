@@ -28,7 +28,14 @@ const cardPorId = async (req, res) => {
 
 const criar = async (req, res) => {
   const card = req.body;
-  if (!card || !card.nome || !card.imageUrl || !card.categoria) {
+  if (
+    !card ||
+    !card.nome ||
+    !card.imageUrl ||
+    //!card.siteReferencia ||
+    //!card.texto ||
+    !card.categoria
+  ) {
     return res.status(400).send({
       message: "Dados inválidos ou dados obrigatórios não informados!",
     });
@@ -43,7 +50,7 @@ const criar = async (req, res) => {
 
   const novoCard = await service.criar(card);
 
-  res.status(201).send(novoCard);
+  res.status(201).send({ message: "Card criado com sucesso!" });
 };
 
 const atulizar = async (req, res) => {
