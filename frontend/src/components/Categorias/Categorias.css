@@ -70,19 +70,34 @@
   padding: 15px;
 }
 
-.editarRemover{
+.editarRemover {
   float: right;
 }
 
-.iconeEditarCategoria{
+.iconeEditarCategoria {
   font-size: 1.5rem;
   color: rgb(96, 96, 253);
   cursor: pointer;
 }
 
-.iconeExcluirCategoria{
+.iconeExcluirCategoria {
   margin-left: 1rem;
   font-size: 1.5rem;
   color: rgb(255, 97, 97);
   cursor: pointer;
+}
+
+.irParaTopo {
+  color: #0042be; /* alterar cor do botão */
+  position: fixed;
+  bottom: 8%; /* posição vertical: quanto maior, mais para cima */
+  right: 90%; /* posição horizontal: quanto maior, mais para esquerda */
+  font-size: 2rem; /*tamanho do botão*/
+}
+.irParaTopo:active,
+.irParaTopo:focus,
+.irParaTopo:hover {
+  text-decoration: none;
+  color: blue; /* alterar cor do botão quando o mouse estiver em cima ou mobile */
+  font-size: 2.5rem;
 }

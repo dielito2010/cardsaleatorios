@@ -1,9 +1,11 @@
 import "./Categorias.css";
 import { Api } from "../../api/api";
 import { CategoriaCriar } from "./CategoriaCriar";
-import { CategoriaEditar } from "./CategoriaEditar"
+import { CategoriaEditar } from "./CategoriaEditar";
 import { CategoriaRemover } from "./CategoriaRemover";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export function Categorias() {
   const [categorias, setCategorias] = useState();
@@ -31,7 +33,7 @@ export function Categorias() {
 
   return (
     <div className="categorias">
-      <div className="message"></div>
+      <div className="message" id="message"></div>
       <CategoriaCriar renderizarCategorias={relizarRequisicao} />
       {categorias.map((categoria) => (
         <div className="categoria" key={categoria._id}>
@@ -42,12 +44,15 @@ export function Categorias() {
               renderizarCategorias={relizarRequisicao}
             />
             <CategoriaRemover
-              id={categoria._id}
+              categoria={categoria}
               renderizarCategorias={relizarRequisicao}
             />
           </div>
         </div>
       ))}
+      <a href="#root" className="irParaTopo" title="Ir para o topo">
+        <FontAwesomeIcon icon={faCircleArrowUp} />
+      </a>
     </div>
   );
 }

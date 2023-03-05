@@ -4,10 +4,15 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export function CategoriaRemover(props) {
   async function removeCategoria() {
-    if (!confirm("Deseja realmente excluir essa categoria?")) {
+    if (
+      !confirm(
+        "Solicitação para excluir a categoria: " +
+          props.categoria.nome.toUpperCase()
+      )
+    ) {
       return;
     }
-    const excluirCategoriaUrl = Api.categorias.excluir(props.id);
+    const excluirCategoriaUrl = Api.categorias.excluir(props.categoria._id);
     const respostaExcluindo = await Api.buildApiDeleteRequest(
       excluirCategoriaUrl
     );
@@ -25,6 +30,7 @@ export function CategoriaRemover(props) {
       className="iconeExcluirCategoria"
       onClick={removeCategoria}
       icon={faTrash}
+      title={"Remover categoria: " + props.categoria.nome.toUpperCase()}
     />
   );
 }

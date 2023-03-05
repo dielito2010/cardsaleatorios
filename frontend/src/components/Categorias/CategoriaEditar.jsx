@@ -31,6 +31,7 @@ export function CategoriaEditar(props) {
       icon={faEdit}
       className="iconeEditarCategoria"
       onClick={editar}
+      title={"Editar categoria: "+props.categoria.nome.toUpperCase()}
     />
   );
 }

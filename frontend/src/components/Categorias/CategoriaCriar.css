@@ -1,0 +1,20 @@
+#nomeCategoria{
+    width: 80%;
+	margin: 0 auto;
+	padding: 5px;
+	border: none;
+	border-radius: 50px;
+    cursor: pointer;
+}
+
+#bntSubmit{
+    border: none;
+    float: right;
+    background-color: white;
+}
+
+#bntIconFormSubmit{
+    color: rgb(77, 141, 77);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
