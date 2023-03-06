@@ -22,7 +22,7 @@ const categoriaId = async (req, res) => {
     return res.status(404).send({ message: "categoria não encontrada!" });
   }
 
-  res.send(id);
+  res.send(categoriaId);
 };
 
 const criar = async (req, res) => {
