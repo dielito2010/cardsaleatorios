@@ -56,7 +56,6 @@
 .categoria {
   background: #ffffff;
   border-radius: 30px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin: 8px 0;
   padding: 15px;
   text-align: center;
@@ -65,9 +64,9 @@
 .entradaCategoria {
   background: white;
   border-radius: 30px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin: 8px 0;
   padding: 15px;
+  box-shadow: 1px 1px 1px black;
 }
 
 .editarRemover {
@@ -79,12 +78,18 @@
   color: rgb(96, 96, 253);
   cursor: pointer;
 }
+.iconeEditarCategoria:hover{
+  color: blue;
+}
 
 .iconeExcluirCategoria {
   margin-left: 1rem;
   font-size: 1.5rem;
   color: rgb(255, 97, 97);
   cursor: pointer;
+}
+.iconeExcluirCategoria:hover{
+  color: red;
 }
 
 .irParaTopo {

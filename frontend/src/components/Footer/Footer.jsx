@@ -12,7 +12,7 @@ export function Footer() {
         <a
           href="https://danielribeiro.dev.br/"
           target="_blank"
-          title="Clik para navegar ao site: danielribeiro.dev.br"
+          title="Click para navegar ao site: danielribeiro.dev.br"
         >
           danielribeiro.dev.br
         </a>

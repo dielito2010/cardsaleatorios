@@ -1,3 +1,4 @@
+import "./CardCriar.css";
 import { Api } from "../../api/api";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +38,7 @@ export function CardCriar() {
       imageUrl: dadosDoForm.imagemUrl.value,
       siteReferencia: dadosDoForm.siteReferencia.value,
       texto: dadosDoForm.textoGrande.value,
-      categoria: dadosDoForm.categorias.value,
+      categoria: dadosDoForm.categoria.value,
     };
     const criandoUrl = Api.cards.criar();
     const respostaCriando = await Api.buildApiPostRequest(criandoUrl, objeto);
@@ -61,8 +62,8 @@ export function CardCriar() {
   }
 
   return (
-    <form onSubmit={addCard}>
-      <div className="entradaCard">
+    <div className="entradaCard">
+      <form onSubmit={addCard}>
         <input
           type="text"
           id="tituloCard"
@@ -78,7 +79,7 @@ export function CardCriar() {
         <input
           type="text"
           id="siteReferencia"
-          placeholder="Informe ums URL de referência:"
+          placeholder="Informe o site de referência:"
           title="Clik para digitar"
         />
         <textarea
@@ -88,10 +89,14 @@ export function CardCriar() {
           cols="30"
           rows="10"
         ></textarea>
-        <select name="categorias" title="Click para selecionar uma categoria">
-          {categorias.map((cat) => (
-            <option key={cat._id} value={cat._id}>
-              {cat.nome}
+        <select
+          name="categoria"
+          className="categoria"
+          title="Click para selecionar uma categoria"
+        >
+          {categorias.map((categoria) => (
+            <option key={categoria._id} value={categoria._id}>
+              {categoria.nome}
             </option>
           ))}
         </select>
@@ -102,8 +107,8 @@ export function CardCriar() {
         >
           <FontAwesomeIcon icon={faCirclePlus} />
         </button>
-      </div>
-      <label>* Campos obrigatórios!</label>
-    </form>
+      </form>
+      <small>* Campos obrigatórios!</small>
+    </div>
   );
 }

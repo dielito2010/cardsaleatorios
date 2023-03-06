@@ -1,0 +1,38 @@
+.entradaCard {
+  margin: 150px auto 10px auto;
+  background: lightgray;
+  padding: 30px;
+  width: 350px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+#tituloCard,
+#imagemUrl,
+#siteReferencia,
+#textoGrande,
+.categoria {
+  width: 90%;
+  font-size: 1rem;
+  border: none;
+  background: #ffffff;
+  border-radius: 30px;
+  margin: 5px auto;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px black;
+}
+
+#bntSubmitNovoCard {
+  font-size: 3rem;
+  color: rgb(77, 141, 77);
+  cursor: pointer;
+  border: none;
+  background-color: lightgray;
+  margin: 30px;
+}
+
+#bntSubmitNovoCard:hover {
+  color: darkgreen;
+}
