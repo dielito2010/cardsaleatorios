@@ -59,6 +59,7 @@
   margin: 8px 0;
   padding: 15px;
   text-align: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .entradaCategoria {
@@ -66,7 +67,7 @@
   border-radius: 30px;
   margin: 8px 0;
   padding: 15px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .editarRemover {

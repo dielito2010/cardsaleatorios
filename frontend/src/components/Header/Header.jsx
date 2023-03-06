@@ -13,7 +13,7 @@ function Header () {
                     </a>
                 </div>
                 <div className="botoes">
-                    <a href="/novo-card">Novo card &nbsp;
+                    <a href="/novoCard">Novo card &nbsp;
                     <FontAwesomeIcon icon= { faCirclePlus } /></a>
                     <a href="/categorias">Categorias &nbsp;
                     <FontAwesomeIcon icon= { faList } /></a>

@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Cards />} />
             <Route path="/categorias" element={<Categorias />} />
-            <Route path="/novo-card" element={<CardCriar />} />
+            <Route path="/novoCard" element={<CardCriar />} />
           </Routes>
         </div>
       </main>

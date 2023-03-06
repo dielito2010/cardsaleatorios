@@ -90,7 +90,7 @@ export function CardCriar() {
           rows="10"
         ></textarea>
         <select
-          name="categoria"
+          id="categoria"
           className="categoria"
           title="Click para selecionar uma categoria"
         >
