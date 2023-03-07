@@ -79,7 +79,7 @@ export function CardCriar() {
         <input
           type="text"
           id="siteReferencia"
-          placeholder="Informe o site de referência:"
+          placeholder="Informe o site de referência da imagem:"
           title="Clik para digitar"
         />
         <textarea

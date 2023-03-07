@@ -1,0 +1,46 @@
+.todosCards {
+  padding: 100px 0px 0px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.conteudoCard {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #f3f3f3;
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  border-top: 0.4rem solid #00a7e2;
+  border-bottom: 0.4rem solid #00a7e2;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  transition: all 0.2s;
+}
+
+.conteudoCard:hover {
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 28%);
+  transform: scale(1.02);
+}
+
+.conteudoCard h1 {
+  border-left: 0.5rem solid #00a7e2;
+  text-align: left;
+  padding-left: 0.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.conteudoCard img {
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 15%)
+}
+
+.conteudoCard label {
+  margin-top: 1rem;
+}

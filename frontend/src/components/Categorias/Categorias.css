@@ -46,20 +46,23 @@
 }
 
 .categorias {
-  margin: 150px auto 10px auto;
-  background: lightgray;
+  margin: 150px auto 30px auto;
+  background: #f3f3f3;
   padding: 30px;
   width: 350px;
-  border-radius: 30px;
+  border-radius: 1rem;
+  border-top: 0.4rem solid #00a7e2;
+  border-bottom: 0.4rem solid #00a7e2;
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 20%);
 }
 
 .categoria {
   background: #ffffff;
   border-radius: 30px;
-  margin: 8px 0;
-  padding: 15px;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .entradaCategoria {
@@ -67,7 +70,7 @@
   border-radius: 30px;
   margin: 8px 0;
   padding: 15px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .editarRemover {

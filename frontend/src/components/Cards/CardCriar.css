@@ -1,10 +1,13 @@
 .entradaCard {
-  margin: 150px auto 10px auto;
-  background: lightgray;
+  margin: 150px auto 30px auto;
+  background: #f3f3f3;
   padding: 30px;
   width: 350px;
-  border-radius: 30px;
+  border-radius: 1rem;
   text-align: center;
+  border-top: 0.4rem solid #00a7e2;
+  border-bottom: 0.4rem solid #00a7e2;
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 20%);
 }
 
 #tituloCard,
@@ -21,7 +24,22 @@
   padding: 15px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#tituloCard:hover{
+  border: 2px solid #00a7e2;
+}
+
+#imagemUrl:hover{
+  border: 2px solid #00a7e2;
+}
+
+#siteReferencia:hover{
+  border: 2px solid #00a7e2;
+}
+
+#textoGrande:hover{
+  border: 2px solid #00a7e2;
 }
 
 #bntSubmitNovoCard {
@@ -29,7 +47,7 @@
   color: rgb(77, 141, 77);
   cursor: pointer;
   border: none;
-  background-color: lightgray;
+  background-color: #f3f3f3;
   margin: 30px;
 }
 
