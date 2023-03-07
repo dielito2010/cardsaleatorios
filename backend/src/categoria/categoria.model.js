@@ -7,7 +7,7 @@ const categoriaSchema = new mongoose.Schema({
 });
 
 //Declarando variável que recebe o modelo categorias
-const Categorias = mongoose.model("Categorias", categoriaSchema);
+const Categoria = mongoose.model("Categoria", categoriaSchema);
 
 //Exportando categorias e suas propriedades para API
-module.exports = Categorias;
+module.exports = Categoria;
