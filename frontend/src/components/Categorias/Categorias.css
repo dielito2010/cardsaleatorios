@@ -49,7 +49,8 @@
   margin: 150px auto 30px auto;
   background: #f3f3f3;
   padding: 30px;
-  width: 350px;
+  min-width: 300px;
+  max-width: 500px;
   border-radius: 1rem;
   border-top: 0.4rem solid #00a7e2;
   border-bottom: 0.4rem solid #00a7e2;
@@ -62,15 +63,15 @@
   margin: 1rem;
   padding: 1rem;
   text-align: center;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 10%);
 }
 
 .entradaCategoria {
+  display: flex;
+  justify-content: space-between;
   background: white;
   border-radius: 30px;
-  margin: 8px 0;
-  padding: 15px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 10%);
 }
 
 .editarRemover {

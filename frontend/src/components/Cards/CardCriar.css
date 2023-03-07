@@ -1,8 +1,9 @@
 .entradaCard {
-  margin: 150px auto 30px auto;
+  margin: 10rem auto 1rem auto;
   background: #f3f3f3;
-  padding: 30px;
-  width: 350px;
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 500px;
   border-radius: 1rem;
   text-align: center;
   border-top: 0.4rem solid #00a7e2;
@@ -18,28 +19,37 @@
   width: 90%;
   font-size: 1rem;
   border: none;
-  background: #ffffff;
   border-radius: 30px;
   margin: 5px auto;
   padding: 15px;
   text-align: center;
   cursor: pointer;
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 10%);
 }
 
-#tituloCard:hover{
-  border: 2px solid #00a7e2;
+#tituloCard:hover {
+  outline: 3px solid #00a7e2;
+  outline-offset: -2px;
 }
 
-#imagemUrl:hover{
-  border: 2px solid #00a7e2;
+#imagemUrl:hover {
+  outline: 3px solid #00a7e2;
+  outline-offset: -2px;
 }
 
-#siteReferencia:hover{
-  border: 2px solid #00a7e2;
+#siteReferencia:hover {
+  outline: 3px solid #00a7e2;
+  outline-offset: -2px;
 }
 
-#textoGrande:hover{
-  border: 2px solid #00a7e2;
+#textoGrande:hover {
+  outline: 3px solid #00a7e2;
+  outline-offset: -2px;
+}
+
+#categoria:hover {
+  outline: 3px solid #00a7e2;
+  outline-offset: -2px;
 }
 
 #bntSubmitNovoCard {

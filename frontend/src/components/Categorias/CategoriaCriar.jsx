@@ -30,7 +30,7 @@ export function CategoriaCriar(props) {
         <input
           type="text"
           id="nomeCategoria"
-          placeholder="Digite uma nova categoria..."
+          placeholder="Digite a categoria e click em adicionar"
           title="Click para digitar"
         />
         <button
