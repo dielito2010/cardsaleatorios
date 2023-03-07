@@ -12,7 +12,7 @@ const todosCards = () => {
 
 const cardPorId = (id) => {
   const objectID = new ObjectId(id);
-  return Card.findById(objectID);
+  return Card.findById(objectID).populate("categoria");
 };
 
 const criar = (card) => {

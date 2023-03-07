@@ -1,12 +1,12 @@
-//import "./ItemCard.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan, faEdit } from "@fortawesome/free-solid-svg-icons";
-import { Api } from "../../api/api";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Card(props) {
   const card = props.card;
-  //const navegar = useNavigate();
+  const navegar = useNavigate();
+
+  function editarRemover(){
+    navegar("/cardEditarRemover/" + card._id)
+  }
 
   //async function excluirCard() {
   //  if (
@@ -28,9 +28,9 @@ export function Card(props) {
   //}
 
   return (
-    <div className="conteudoCard">
+    <div className="conteudoCard" onClick={editarRemover}>
       <h1>{card.nome}</h1>
-      <img src={card.imageUrl} width={150} height={150} />
+      <img src={card.imageUrl} width={170} height={150} />
       <label>{card.categoria.nome}</label>
     </div>
   );

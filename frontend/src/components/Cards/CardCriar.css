@@ -1,5 +1,5 @@
 .entradaCard {
-  margin: 10rem auto 1rem auto;
+  margin: 1rem auto;
   background: #f3f3f3;
   padding: 1rem;
   min-width: 300px;
@@ -53,12 +53,12 @@
 }
 
 #bntSubmitNovoCard {
+  margin: 1rem;
   font-size: 3rem;
   color: rgb(77, 141, 77);
   cursor: pointer;
   border: none;
   background-color: #f3f3f3;
-  margin: 30px;
 }
 
 #bntSubmitNovoCard:hover {

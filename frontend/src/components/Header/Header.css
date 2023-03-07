@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 nav {
-    width: 100vw;
     background: #0042BE;
-    position: fixed;
-    padding: 1rem;
 }
 
 .conteudoNav{
-    margin: auto;
-    padding: 0px 30px 0px 0px;
+    padding: 1rem;
     min-width: 400px;
     max-width: 1200px;
     display: flex;
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .logo {
@@ -23,6 +20,7 @@ nav {
     font-size: 1.5rem;
     text-shadow: 3px 5px black;
     margin: auto;
+    padding: 1rem 0rem;
 }
 
 .logo a {
@@ -36,7 +34,7 @@ nav {
 
 .botoes {
     margin: auto;
-    padding: 20px 0px 0px 0px;
+    padding: 1rem 0rem;
 }
 
 .botoes a{

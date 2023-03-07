@@ -9,7 +9,7 @@ export const Api = {
     todosCards: function () {
       return Api.Url + "/cards";
     },
-    categoriaId: function (id) {
+    cardId: function (id) {
       return this.todosCards() + "/" + id;
     },
     atualizar: function (id) {

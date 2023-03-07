@@ -1,5 +1,8 @@
 .todosCards {
-  padding-top: 9rem;
+  margin: auto;
+  min-width: 300px;
+  max-width: 1080px;
+  padding: 1rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
