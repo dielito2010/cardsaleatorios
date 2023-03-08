@@ -47,3 +47,8 @@
 .conteudoCard label {
   margin-top: 1rem;
 }
+
+#labelCategoria{
+  font-family: 'Press Start 2P', cursive;
+  color: #00a7e2;
+}

@@ -8,6 +8,7 @@ import { CardEditRemv } from "./components/Cards/CardPorId";
 //usando export no inicio da função tem que colocar entre chaves
 //usando export no final do arquivo não pode colocar entre chaves
 import Header from "./components/Header/Header";
+import { CardEditar } from "./components/Cards/CardEditar";
 
 function App() {
   return (
@@ -22,10 +23,8 @@ function App() {
             <Route path="/" element={<Cards />} />
             <Route path="/categorias" element={<Categorias />} />
             <Route path="/novoCard" element={<CardCriar />} />
-            <Route
-              path="/cardEditarRemover/:id"
-              element={<CardEditRemv />}
-            />
+            <Route path="/cardEditarRemover/:id" element={<CardEditRemv />} />
+            <Route path="/cardEditar/:id" element={<CardEditar />} />
           </Routes>
         </div>
       </main>
