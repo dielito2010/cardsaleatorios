@@ -7,10 +7,10 @@ export function CardRemover(props) {
   const card = props.card;
   const navegar = useNavigate();
   async function excluirCard() {
-    console.log(card);
+    //console.log(card);
     if (
       !confirm(
-        "Solicitação para excluir o card:\n" +
+        "Confirme ou cancele a solicitação para excluir o card:\n" +
           card.categoria.nome.toUpperCase() +
           " => " +
           card.nome

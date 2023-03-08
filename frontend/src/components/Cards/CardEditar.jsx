@@ -1,6 +1,6 @@
 import "./CardEditar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSave } from "@fortawesome/free-solid-svg-icons";
+import { faSave, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useParams, useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import { useState, useEffect } from "react";
@@ -9,6 +9,10 @@ import { CategoriasSelect } from "../Categorias/CategoriasSelect";
 export function CardEditar() {
   const { id } = useParams();
   const navegar = useNavigate();
+  function bntVoltar(){
+    navegar("/cardEditarRemover/" + id);
+  }
+  
   const [card, setCard] = useState();
 
   async function buscarCardPorId() {
@@ -49,13 +53,13 @@ export function CardEditar() {
       );
       const resultadoEditar = await respostaEditar.json();
       event.target.bntSubmitEditarCard.disable = false;
-      console.log(resultadoEditar)
+      //console.log(resultadoEditar)
 
       if (respostaEditar.status === 200) {
-        alert(resultadoEditar.message)
-        navegar("/")
+        alert(resultadoEditar.message);
+        navegar("/cardEditarRemover/" + id);
       } else {
-        alert(resultadoEditar.message)
+        alert(resultadoEditar.message);
       }
     }
   }
@@ -63,8 +67,10 @@ export function CardEditar() {
   return (
     <div className="entradaCard">
       <form onSubmit={salvarEdicao}>
-        <h3>Edite os dados do card:</h3>
-        <br />
+        <nav className="voltar">
+          <FontAwesomeIcon icon={faCircleArrowLeft} id="bntVoltar" onClick={bntVoltar} />
+          <h3>Edite os dados do card:</h3>
+        </nav>
         <small>*Nome:</small>
         <input
           type="text"

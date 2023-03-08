@@ -1,3 +1,19 @@
+.voltar{
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bntVoltar{
+  font-size: 2rem;
+  color: #00a7e2;
+}
+
+#bntVoltar:hover{
+ color: blue;
+}
+
 .entradaCard h3 {
   font-family: "Press Start 2P", cursive;
   color: #00a7e2;

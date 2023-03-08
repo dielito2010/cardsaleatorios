@@ -1,14 +1,18 @@
 import "./CardPorId.css";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import { CardRemover } from "./CardRemover";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export function CardEditRemv() {
   const { id } = useParams();
   const navegar = useNavigate();
+  function bntVoltar(){
+    navegar("/")
+  }
+
   const [card, setCard] = useState();
 
   async function buscarCardPorId() {
@@ -31,13 +35,16 @@ export function CardEditRemv() {
   }
 
   function editarCard() {
-    navegar("/cardEditar/" + card._id)
+    navegar("/cardEditar/" + card._id);
   }
 
   return (
     <div className="cardPorId">
-      <FontAwesomeIcon icon={faEdit} size="3x" onClick={editarCard} />
-      <CardRemover card={card} />
+      <nav className="voltar">
+        <FontAwesomeIcon icon={faCircleArrowLeft} onClick={bntVoltar} />
+        <FontAwesomeIcon icon={faEdit} size="3x" onClick={editarCard} />
+        <CardRemover card={card} />
+      </nav>
       <label htmlFor="catCardId">Categoria: </label>
       <p id="catCardId">{card.categoria.nome}</p>
       <h1>{card.nome}</h1>
