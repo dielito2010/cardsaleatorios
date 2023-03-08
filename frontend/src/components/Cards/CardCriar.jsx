@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { CategoriasSelect } from "../Categorias/CategoriasSelect"
 
 export function CardCriar() {
   const navegar = useNavigate();
@@ -89,17 +90,7 @@ export function CardCriar() {
           cols="30"
           rows="10"
         ></textarea>
-        <select
-          id="categoria"
-          className="categoria"
-          title="Click para selecionar uma categoria"
-        >
-          {categorias.map((categoria) => (
-            <option key={categoria._id} value={categoria._id}>
-              {categoria.nome}
-            </option>
-          ))}
-        </select>
+        <CategoriasSelect />
         <button
           type="submit"
           id="bntSubmitNovoCard"

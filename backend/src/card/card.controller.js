@@ -60,8 +60,24 @@ const atulizar = async (req, res) => {
   }
 
   const card = req.body;
-  if (!card || !card.nome || !card.imageUrl || !card.categoria) {
-    return res.status(400).send({ message: "Dados inválidos!" });
+  if (
+    !card ||
+    !card.nome ||
+    !card.imageUrl ||
+    //!card.siteReferencia ||
+    //!card.texto ||
+    !card.categoria
+  ) {
+    return res.status(400).send({
+      message: "Dados inválidos ou dados obrigatórios não informados!",
+    });
+  }
+
+  const categoria = req.body;
+  const categoriaId = categoria.categoria;
+  const buscarId = await serviceCategoria.categoriaId(categoriaId);
+  if (!buscarId) {
+    return res.status(404).send({ message: "categoria não encontrada!" });
   }
 
   const atulizarCard = await service.atulizar(id, card);

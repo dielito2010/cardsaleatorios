@@ -1,0 +1,17 @@
+.entradaCard h3 {
+  font-family: "Press Start 2P", cursive;
+  color: #00a7e2;
+}
+
+#bntSubmitEditarCard {
+  margin: 1rem;
+  font-size: 3rem;
+  color: #00a7e2;
+  cursor: pointer;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+#bntSubmitEditarCard:hover {
+  color: blue;
+}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function Card(props) {
   const card = props.card;
   const navegar = useNavigate();
+  //console.log(card.categoria.nome)
 
   function editarRemover(){
     navegar("/cardEditarRemover/" + card._id)
