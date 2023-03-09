@@ -1,8 +1,8 @@
 import "./Categorias.css";
 import { Api } from "../../api/api";
-import { CategoriaCriar } from "./CategoriaCriar";
-import { CategoriaEditar } from "./CategoriaEditar";
-import { CategoriaRemover } from "./CategoriaRemover";
+import { CategoriaCriar } from "../CategoriaCriar/CategoriaCriar";
+import { CategoriaEditar } from "../CategoriaEditar/CategoriaEditar";
+import { CategoriaRemover } from "../CategoriaRemover/CategoriaRemover";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";

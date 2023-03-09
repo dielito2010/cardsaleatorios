@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { CategoriasSelect } from "../Categorias/CategoriasSelect"
+import { CategoriasSelect } from "../CategoriaSelect/CategoriasSelect"
 
 export function CardCriar() {
   const navegar = useNavigate();

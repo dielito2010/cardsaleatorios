@@ -1,4 +1,4 @@
-import "./CardPorId.css"
+import "../CardPorId/CardPorId.css"
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

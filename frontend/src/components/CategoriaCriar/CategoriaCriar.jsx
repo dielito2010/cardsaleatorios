@@ -1,5 +1,5 @@
 import "./CategoriaCriar.css";
-import { useNavigate } from "react-router-dom"
+//import { useNavigate } from "react-router-dom"
 import { Api } from "../../api/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";

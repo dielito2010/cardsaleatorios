@@ -4,7 +4,7 @@ import { faSave, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useParams, useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import { useState, useEffect } from "react";
-import { CategoriasSelect } from "../Categorias/CategoriasSelect";
+import { CategoriasSelect } from "../CategoriaSelect/CategoriasSelect";
 
 export function CardEditar() {
   const { id } = useParams();

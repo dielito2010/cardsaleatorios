@@ -2,11 +2,11 @@ import "./CardPorId.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
-import { CardRemover } from "./CardRemover";
+import { CardRemover } from "../CardRemover/CardRemover";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-export function CardEditRemv() {
+export function CardPorId() {
   const { id } = useParams();
   const navegar = useNavigate();
   function bntVoltar() {

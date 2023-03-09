@@ -1,5 +1,5 @@
 import "./Cards.css";
-import { Card } from "./Card";
+import { Card } from "../Card/Card";
 import { Api } from "../../api/api";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
