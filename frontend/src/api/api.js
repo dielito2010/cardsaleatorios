@@ -1,8 +1,8 @@
 /*Declarando e exportando endpoints e setando o endereço
 para onde será feita as requisições HTTP*/
 export const Api = {
-  Url: "http://localhost:3000",
-  //Url: "https://api-cards-aleatorios.onrender.com",
+  //Url: "http://localhost:3000",
+  Url: "https://api-cards-aleatorios.onrender.com",
 
   //Endpoints dos cards
   cards: {
