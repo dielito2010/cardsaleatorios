@@ -2,7 +2,7 @@
 para onde será feita as requisições HTTP*/
 export const Api = {
   //Url: "http://localhost:3000",
-  Url: "https://api-cards-aleatorios.onrender.com",
+  Url: "https://api-cards-aleatorios-6wfc.onrender.com",
 
   //Endpoints dos cards
   cards: {
