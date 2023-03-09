@@ -1,6 +1,5 @@
 import "./CardCriar.css";
 import { Api } from "../../api/api";
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
@@ -8,28 +7,7 @@ import { CategoriasSelect } from "../CategoriaSelect/CategoriasSelect";
 
 export function CardCriar() {
   const navegar = useNavigate();
-  const [categorias, setCategorias] = useState();
 
-  async function buscarCategorias() {
-    const categoriasDoBanco = Api.categorias.todasCategorias();
-    const categoriasCarregadas = await Api.buildApiGetRequest(
-      categoriasDoBanco
-    );
-    const resultado = await categoriasCarregadas.json();
-    setCategorias(resultado);
-  }
-
-  useEffect(function () {
-    buscarCategorias();
-  }, []);
-
-  if (categorias === undefined) {
-    return (
-      <div className="typewriter">
-        <h1>Carregando...</h1>
-      </div>
-    );
-  }
   async function addCard(event) {
     event.preventDefault();
     event.target.bntSubmitNovoCard.disable = true;
@@ -56,7 +34,10 @@ export function CardCriar() {
         navegar("/");
       } else {
         navegar("/novoCard");
-        location.reload(false);
+        dadosDoForm.tituloCard.value = ""
+        dadosDoForm.imagemUrl.value = ""
+        dadosDoForm.siteReferencia.value = ""
+        dadosDoForm.textoGrande.value = ""
       }
     } else {
       alert(resultadoCriando.message);
