@@ -69,8 +69,8 @@ export function CardPorId() {
         />
       </a>
       <small>Site de referência:</small>
-      <a id="siteCard" href={card.siteReferencia}>
-        {card.siteReferencia}
+      <a id="siteCard" href={card.siteReferencia} target="_blank">
+        <p>{card.siteReferencia}</p>
       </a>
       <small>Informações adicionais:</small>
       <p id="textoCard">{card.texto}</p>

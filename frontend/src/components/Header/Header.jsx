@@ -17,16 +17,16 @@ function Header() {
     <nav>
       <div className="conteudoNav">
         <div className="logo">
-          <a href="/">
+          <a href="/" title="CardsAleatóriosHome">
             <h1>Cards Aleatórios</h1>
           </a>
         </div>
         <div className="botoes">
-          <button onClick={novoCard} id="bntNovoCard">
+          <button onClick={novoCard} id="bntNovoCard" title="Criar um card">
             Novo card &nbsp;
             <FontAwesomeIcon icon={faCirclePlus} />
           </button>
-          <button onClick={categorias} id="bntCategorias">
+          <button onClick={categorias} id="bntCategorias" title="Categorias">
             Categorias &nbsp;
             <FontAwesomeIcon icon={faList} />
           </button>

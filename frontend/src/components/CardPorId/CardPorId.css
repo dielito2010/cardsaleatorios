@@ -54,6 +54,13 @@
   margin-bottom: 2rem;
 }
 
+#siteCard p {
+  min-width: 200px;
+  max-width: 300px;
+  margin: auto;
+  word-wrap: break-word;
+}
+
 #imgCard {
   cursor: pointer;
   margin: 1rem auto 2rem auto;
