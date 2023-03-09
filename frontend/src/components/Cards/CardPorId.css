@@ -1,12 +1,69 @@
-.cardPorId {
-    margin: auto;
-    min-width: 300px;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.cardEditarRemover {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  background: #f3f3f3;
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 1rem;
+  text-align: center;
+  border-top: 0.4rem solid #00a7e2;
+  border-bottom: 0.4rem solid #00a7e2;
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 20%);
 }
 
-.cardPorId img {
-    margin: auto;
+#bntEdit {
+  font-size: 2rem;
+  color: rgb(82, 219, 174);
+}
+
+#bntEdit:hover {
+  color: green;
+  transform: scale(1.20);
+}
+
+#bntExcluirCard{
+    font-size: 2rem;
+    color: lightcoral;
+}
+
+#bntExcluirCard:hover{
+    color: red;
+    transform: scale(1.20);
+}
+
+.cardEditarRemover h1 {
+  border-left: 0.5rem solid #00a7e2;
+  border-right: 0.5rem solid #00a7e2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 2rem;
+  margin: 0 auto 1rem auto;
+}
+
+#catCard,
+#siteCard,
+#textoCard {
+  border-left: 0.5rem solid #00a7e2;
+  border-right: 0.5rem solid #00a7e2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+#imgCard {
+  cursor: pointer;
+  margin: 1rem auto 2rem auto;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 20%);
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+#imgCard:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 20px 6px rgb(32 33 36 / 50%);
 }

@@ -1,3 +1,4 @@
+import "./CardPorId.css"
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../api/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,5 +29,12 @@ export function CardRemover(props) {
       alert(body.message);
     }
   }
-  return <FontAwesomeIcon icon={faTrash} onClick={excluirCard} size="3x" />;
+  return (
+    <FontAwesomeIcon
+      icon={faTrash}
+      onClick={excluirCard}
+      id="bntExcluirCard"
+      title={"Remover card: "+card.nome.toUpperCase()}
+    />
+  );
 }

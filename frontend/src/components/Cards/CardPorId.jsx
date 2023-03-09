@@ -9,8 +9,8 @@ import { faEdit, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export function CardEditRemv() {
   const { id } = useParams();
   const navegar = useNavigate();
-  function bntVoltar(){
-    navegar("/")
+  function bntVoltar() {
+    navegar("/");
   }
 
   const [card, setCard] = useState();
@@ -39,21 +39,40 @@ export function CardEditRemv() {
   }
 
   return (
-    <div className="cardPorId">
+    <div className="cardEditarRemover">
       <nav className="voltar">
-        <FontAwesomeIcon icon={faCircleArrowLeft} onClick={bntVoltar} />
-        <FontAwesomeIcon icon={faEdit} size="3x" onClick={editarCard} />
+        <FontAwesomeIcon
+          icon={faCircleArrowLeft}
+          onClick={bntVoltar}
+          id="bntVoltar"
+          title="Voltar para todos os cards"
+        />
+        <FontAwesomeIcon 
+          icon={faEdit}
+          onClick={editarCard}
+          id="bntEdit"
+          title={"Editar card: "+card.nome.toUpperCase()}
+       />
         <CardRemover card={card} />
       </nav>
-      <label htmlFor="catCardId">Categoria: </label>
-      <p id="catCardId">{card.categoria.nome}</p>
+      <small>Nome do card:</small>
       <h1>{card.nome}</h1>
-      <img src={card.imageUrl} alt="Imagem do card" width={200} height={150} />
-      <label htmlFor="siteRefId">Site de referência: </label>
-      <a id="siteRefId" href={card.siteReferencia}>
+      <small>Categoria:</small>
+      <p id="catCard">{card.categoria.nome}</p>
+      <a href={card.imageUrl} target="_blank">
+        <img
+          id="imgCard"
+          src={card.imageUrl}
+          alt="Imagem do card"
+          width={300}
+          height={200}
+        />
+      </a>
+      <small>Site de referência:</small>
+      <a id="siteCard" href={card.siteReferencia}>
         {card.siteReferencia}
       </a>
-      <label htmlFor="textoCard">Informações adicionais: </label>
+      <small>Informações adicionais:</small>
       <p id="textoCard">{card.texto}</p>
     </div>
   );

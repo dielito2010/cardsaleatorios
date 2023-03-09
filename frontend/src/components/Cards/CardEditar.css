@@ -1,6 +1,6 @@
 .voltar{
   background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-around;
 }
@@ -12,6 +12,7 @@
 
 #bntVoltar:hover{
  color: blue;
+ transform: scale(1.20);
 }
 
 .entradaCard h3 {
@@ -30,4 +31,5 @@
 
 #bntSubmitEditarCard:hover {
   color: blue;
+  transform: scale(1.20);
 }

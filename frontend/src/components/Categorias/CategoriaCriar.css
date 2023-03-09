@@ -28,4 +28,5 @@
 
 #bntIconFormSubmit:hover {
     color: darkgreen;
+    transform: scale(1.20);
 }
