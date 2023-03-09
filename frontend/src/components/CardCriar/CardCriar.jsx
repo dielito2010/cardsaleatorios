@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { CategoriasSelect } from "../CategoriaSelect/CategoriasSelect"
+import { CategoriasSelect } from "../CategoriaSelect/CategoriasSelect";
 
 export function CardCriar() {
   const navegar = useNavigate();
@@ -55,7 +55,8 @@ export function CardCriar() {
       ) {
         navegar("/");
       } else {
-        navegar("/novoCard")
+        navegar("/novoCard");
+        location.reload(false);
       }
     } else {
       alert(resultadoCriando.message);
