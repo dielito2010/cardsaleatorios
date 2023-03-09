@@ -55,7 +55,7 @@ export function CardCriar() {
       ) {
         navegar("/");
       } else {
-        location.reload(false);
+        navegar("/novoCard")
       }
     } else {
       alert(resultadoCriando.message);
