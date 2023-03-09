@@ -1,7 +1,9 @@
 import { Api } from "../../api/api";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
 
-export function CategoriasSelect(){
+export function CategoriasSelect() {
   const [categorias, setCategorias] = useState();
 
   async function relizarRequisicao() {
@@ -19,23 +21,23 @@ export function CategoriasSelect(){
 
   if (categorias === undefined) {
     return (
-      <div className="typewriter">
-        <h1>Carregando...</h1>
+      <div>
+        <FontAwesomeIcon icon={faRotate} size="3x" color="#00a7e2"/>
       </div>
     );
   }
 
-  return(
+  return (
     <select
-          id="categoria"
-          className="categoria"
-          title="Click para selecionar uma categoria"
-        >
-          {categorias.map((categoria) => (
-            <option key={categoria._id} value={categoria._id}>
-              {categoria.nome}
-            </option>
-          ))}
+      id="categoria"
+      className="categoria"
+      title="Click para selecionar uma categoria"
+    >
+      {categorias.map((categoria) => (
+        <option key={categoria._id} value={categoria._id}>
+          {categoria.nome}
+        </option>
+      ))}
     </select>
-  )
+  );
 }
